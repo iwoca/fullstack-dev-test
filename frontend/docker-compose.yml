@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  frontend:
+    build: .
+    entrypoint: ["npm", "start"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/home/app/
+      - /home/app/node_modules
