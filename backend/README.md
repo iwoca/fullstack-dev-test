@@ -21,3 +21,15 @@ $ pip3 install -r requirements.txt
 $ ./manage.py migrate
 $ ./manage.py runserver 8000
 ```
+
+## Creating a superuser to access django admin
+
+```bash
+$ ./manage.py createsuperuser
+```
+
+## Running the tests
+
+```bash
+$ ./manage.py test
+```
