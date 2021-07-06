@@ -16,3 +16,9 @@ $ docker-compose run --service-ports frontend npm start
 $ npm install
 $ npm start
 ```
+
+## Running the tests
+
+```bash
+$ npm test
+```
