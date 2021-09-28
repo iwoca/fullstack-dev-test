@@ -22,7 +22,7 @@ You can drop into the django admin (after creating a superuser) and add a new se
 
 ## The task
 
-There are two features we'd like you to implement, it should take around 2 hours altogether.
+There are two features we'd like you to implement, it should take up to 3 hours altogether.
 
 1. At the moment sellers are unable to change their unique handle. They should be able to go to their seller page on the frontend (http://localhost:3000/seller/:sellerId) and update it there but it hasn't been implemented yet.
 
