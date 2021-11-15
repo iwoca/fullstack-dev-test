@@ -27,3 +27,66 @@ There are two features we'd like you to implement, it should take up to 3 hours 
 1. At the moment sellers are unable to change their unique handle. They should be able to go to their seller page on the frontend (http://localhost:3000/seller/:sellerId) and update it there but it hasn't been implemented yet.
 
 2. There's a risk that sellers may update their seller handles after already sharing their pay links with their customers, therefore breaking them. It should be possible for sellers to change their seller handles but not break existing links that used their old handles. For example, if a seller has the handle `acme` their customers would be able to go to `/pay/acme` to pay their invoices. However that link should continue to work when the seller changes their handle to `acme-inc`.
+
+## Getting started (with docker)
+
+```bash
+$ docker-compose build
+
+# Run migrations.
+$ docker-compose run --rm backend ./manage.py migrate
+
+# Create a superuser for yourself.
+$ docker-compose run --rm backend ./manage.py createsuperuser
+
+# Run the frontend tests.
+$ docker-compose run --rm frontend npm test
+
+# Run the backend tests.
+$ docker-compose run --rm backend ./manage.py test
+
+# Start the frontend and backend.
+$ docker-compose up
+```
+
+## Getting started (without docker)
+
+### Frontend (requires Node14+)
+
+```bash
+$ cd frontend/
+
+# Install dependencies.
+$ npm install
+
+# Run the tests.
+$ npm test
+
+# Start the frontend.
+$ npm start
+```
+
+### Backend (requires Python3.9)
+
+```bash
+$ cd backend/
+
+# Create a python virtual environment.
+$ python3 -m venv venv
+$ source venv/bin/activate
+
+# Install dependencies.
+$ pip3 install -r requirements.txt
+
+# Run migrations.
+$ ./manage.py migrate
+
+# Create a superuser for yourself.
+$ ./manage.py createsuperuser
+
+# Run the tests.
+$ ./manage.py test
+
+# Start the backend.
+$ ./manage.py runserver 8000
+```
